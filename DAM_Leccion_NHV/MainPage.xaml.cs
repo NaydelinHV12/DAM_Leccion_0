@@ -34,11 +34,11 @@ namespace DAM_Leccion_NHV
             BindingContext = personaModel.Nombre;
 
             Binding personaBinding = new Binding();
-            personaBinding.Source = personaModel;
+            personaBinding.Source = personaModel; //Origen
             personaBinding.Path = "Nombre";
-            txtNombre.SetBinding(Entry.TextProperty, personaBinding);
+            txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino
 
-
+            
             //PersonaModel personaModel = new PersonaModel();
             //personaModel.Nombre = "Hola aqui estoy";
             //txtNombre.Text = "Hola aqui estoy";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAM_Leccion_NHV.Model
 {
-    class PersonaModel
+    public class PersonaModel
     {
         public string Nombre { get; set; }
     }
