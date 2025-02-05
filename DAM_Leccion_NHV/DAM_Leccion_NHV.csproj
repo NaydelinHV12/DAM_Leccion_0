@@ -43,11 +43,11 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\icono.jpg" Color="#c883e6" />
+		
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
+		<MauiSplashScreen Include="Resources\Splash\winni.png" Color="#db94f2" BaseSize="100,130" />
+		
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
@@ -60,13 +60,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<MauiXaml Remove="ViewModel\SplashPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Resources\Splash\winni.png" />
+	</ItemGroup>
+	
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="ViewModel\" />
-	  <Folder Include="View\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiSplashScreen Include="Resources\Splash\winni.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiXaml Update="ViewModel\SplashPage.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</MauiXaml>
+		<MauiXaml Update="View\Modos.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 	</ItemGroup>
 
 </Project>

@@ -1,15 +1,16 @@
-﻿namespace DAM_Leccion_NHV
+﻿using DAM_Leccion_NHV.View;
+
+namespace DAM_Leccion_NHV
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
+
+            MainPage = new AppShell();
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+        
     }
 }

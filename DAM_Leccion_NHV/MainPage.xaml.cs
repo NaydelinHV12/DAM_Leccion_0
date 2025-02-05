@@ -6,6 +6,8 @@ namespace DAM_Leccion_NHV
     {
         int count = 0;
 
+        public PersonaModel personaModel { get; set; }
+
         public MainPage()
         {
             InitializeComponent();
@@ -26,29 +28,34 @@ namespace DAM_Leccion_NHV
 
         public void Ejecutar()
         {
-            PersonaModel personaModel = new PersonaModel()
+            personaModel = new PersonaModel()
             {
-                Nombre = "Hola, Aquí estoy!",
+                Nombre = "Usuario",
             };
 
-            BindingContext = personaModel.Nombre;
+            BindingContext = personaModel;
 
-            Binding personaBinding = new Binding();
-            personaBinding.Source = personaModel; //Origen
-            personaBinding.Path = "Nombre";
-            txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino
+            //Binding personaBinding = new Binding(); //origen
+            //personaBinding.Path = "Nombre"; //ruta
+            //txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino final
 
-            
+
+
             //PersonaModel personaModel = new PersonaModel();
             //personaModel.Nombre = "Hola aqui estoy";
-            //txtNombre.Text = "Hola aqui estoy";
+            //txtNombre.Text = personaModel.Nombre;
+
+
+            //txtNombre.Text = "HOLA ESTOY AQUI";
         }
 
+        //Evento Guardar
         private void btnAceptar_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la BD", "Aceptar");
-        }
+            // DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la BD", "Aceptar");
+            personaModel.Nombre = "Alondra Montalvo";
 
+        }
     }
 
 }

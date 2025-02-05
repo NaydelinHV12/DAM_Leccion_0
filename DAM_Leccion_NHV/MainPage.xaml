@@ -4,18 +4,19 @@
              x:Class="DAM_Leccion_NHV.MainPage"
              xmlns:Leccion2="clr-namespace:DAM_Leccion_NHV.Model"
              >
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Leccion2:PersonaModel x:Key="persona" Nombre="Naydelin" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
+                Source="hola.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
@@ -37,16 +38,27 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+
             <Entry
-                x:Name="txtNombre"
-                Text="{Binding Nombre}" 
                 Placeholder="Escribe un nombre"
-                HorizontalOptions="FillAndExpand"/>
+                HorizontalOptions="FillAndExpand"
+                x:Name= "txtNombre"
+                Text="{Binding Nombre}"
+                />
+
+            <Entry
+                Placeholder="Coloque su CURP"
+                HorizontalOptions="FillAndExpand"
+                x:Name= "txtNumero"
+                />
+
             <Button
                 x:Name="btnAceptar"
+                Text="Aceptar"
                 Clicked="btnAceptar_Clicked"
-                HorizontalOptions="CenterAndExpand"
-                Text="Aceptar" />
+                HorizontalOptions="CenterAndExpand" />
+
         </VerticalStackLayout>
     </ScrollView>
 
