@@ -8,7 +8,9 @@ namespace DAM_Leccion_NHV
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+
+            MainPage = new PersonasView();
         }
 
         
