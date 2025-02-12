@@ -30,7 +30,7 @@ namespace DAM_Leccion_NHV
         {
             personaModel = new PersonaModel()
             {
-                Nombre = "Usuario",
+                Nombre = "",
             };
 
             BindingContext = personaModel;
@@ -52,8 +52,10 @@ namespace DAM_Leccion_NHV
         //Evento Guardar
         private void btnAceptar_Clicked(object sender, EventArgs e)
         {
-            // DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la BD", "Aceptar");
-            personaModel.Nombre = "Alondra Montalvo";
+            DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la BD", "Aceptar");
+            personaModel.Nombre = "Naydelin";
+            personaModel.Apellido = "Hernández";
+            personaModel.Edad = "21";
 
         }
     }
