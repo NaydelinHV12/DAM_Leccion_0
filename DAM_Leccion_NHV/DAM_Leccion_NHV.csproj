@@ -73,10 +73,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<MauiSplashScreen Include="Resources\Splash\winni.png" />
 	</ItemGroup>
 

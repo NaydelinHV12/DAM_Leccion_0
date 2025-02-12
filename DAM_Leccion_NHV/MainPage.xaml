@@ -7,7 +7,7 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Leccion2:PersonaModel x:Key="persona" Nombre="Naydelin" />
+            <Leccion2:PersonasModel x:Key="persona" Nombre="Naydelin" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -44,20 +44,20 @@
                 Placeholder="Nombre"
                 HorizontalOptions="FillAndExpand"
                 x:Name= "txtNombre"
-                Text="{Binding Nombre}"
+                Text="{Binding personasModel.Nombre}"
                 />
 
             <Entry
                 Placeholder="Apellido"
                 HorizontalOptions="FillAndExpand"
                 x:Name= "txtApellido"
-                Text="{Binding Apellido}"
+                Text="{Binding personasModel.Apellido}"
                 />
             <Entry
                 Placeholder="Edad"
                 HorizontalOptions="FillAndExpand"
                 x:Name= "txtEdad"
-                Text="{Binding Edad}"
+                Text="{Binding personasModel.Edad}"
                 />
            
 

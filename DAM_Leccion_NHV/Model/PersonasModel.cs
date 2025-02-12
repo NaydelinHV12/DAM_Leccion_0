@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAM_Leccion_NHV.Model
 {
-    public class PersonaModel :INotifyPropertyChanged
+    public class PersonasModel :INotifyPropertyChanged
     {
         //Atributos
         private string? nombre;
@@ -39,14 +39,6 @@ namespace DAM_Leccion_NHV.Model
                 OnPropertyChanged();
             }
         }
-
-
-
-
-
-
-
-
 
 
 
